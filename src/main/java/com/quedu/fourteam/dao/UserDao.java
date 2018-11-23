@@ -1,8 +1,9 @@
 package com.quedu.fourteam.dao;
 
+import com.quedu.fourteam.pojo.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import javax.jws.soap.SOAPBinding;
 
-public interface UserDao extends JpaRepository<SOAPBinding.Use,Integer> {
+public interface UserDao extends JpaRepository<User,Integer> {
+
 }
