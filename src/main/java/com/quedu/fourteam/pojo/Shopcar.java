@@ -1,8 +1,15 @@
 package com.quedu.fourteam.pojo;
 
-public class Shopcar {
-    private Integer carId;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "shopcar")
+public class Shopcar {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//标记主键的生成策略 自增
+    @Column(name = "car_id")
+    private Integer carId;
+    @Column(name = "user_id")
     private Integer userId;
 
     public Integer getCarId() {

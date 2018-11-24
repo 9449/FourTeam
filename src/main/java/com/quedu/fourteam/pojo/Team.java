@@ -1,6 +1,13 @@
 package com.quedu.fourteam.pojo;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "team")
 public class Team {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//标记主键的生成策略 自增
+    @Column(name = "team_id")
     private Integer teamId;
 
     private String membername;

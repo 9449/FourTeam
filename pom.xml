@@ -25,10 +25,7 @@
     </properties>
 
     <dependencies>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-jpa</artifactId>
-        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -39,13 +36,15 @@
             <artifactId>slf4j-api</artifactId>
             <version>1.7.21</version>
         </dependency>
-
-
+        <!-- Spring Data JPA操作数据库 代替之前的MyBatis-->
         <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <scope>runtime</scope>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-jpa</artifactId>
+            <version>2.1.0.RELEASE</version>
         </dependency>
+
+
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-test</artifactId>
@@ -63,7 +62,7 @@
             <artifactId>druid</artifactId>
             <version>1.1.11</version>
         </dependency>
-        <!-- Spring Data JPA操作数据库 代替之前的MyBatis-->
+
 
     </dependencies>
 

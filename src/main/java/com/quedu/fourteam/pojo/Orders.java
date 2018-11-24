@@ -1,10 +1,15 @@
 package com.quedu.fourteam.pojo;
 
-import java.util.Date;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "orders")
 public class Orders {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//标记主键的生成策略 自增
+    @Column(name = "order_id")
     private Integer orderId;
-
+    @Column(name = "user_id")
     private Integer userId;
 
     private Integer total;

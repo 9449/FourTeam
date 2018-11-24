@@ -1,8 +1,15 @@
 package com.quedu.fourteam.pojo;
 
-public class Goodimg {
-    private Integer imgId;
+import javax.persistence.*;
 
+@Entity
+@Table(name = "goodimg")
+public class Goodimg {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//标记主键的生成策略 自增
+    @Column(name = "img_id")
+    private Integer imgId;
+    @Column(name = "good_id")
     private Integer goodId;
 
     private String imgurl;

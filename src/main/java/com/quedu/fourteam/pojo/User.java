@@ -1,6 +1,12 @@
 package com.quedu.fourteam.pojo;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "user")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//标记主键的生成策略 自增
     private Integer id;
 
     private String username;
@@ -49,5 +55,16 @@ public class User {
 
     public void setSex(Integer sex) {
         this.sex = sex;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", username='" + username + '\'' +
+                ", password='" + password + '\'' +
+                ", email='" + email + '\'' +
+                ", sex=" + sex +
+                '}';
     }
 }

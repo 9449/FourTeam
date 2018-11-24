@@ -1,15 +1,32 @@
 package com.quedu.fourteam.pojo;
 
+import javax.persistence.*;
+
+@Entity
+@Table(name = "goods")
 public class Goods {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)//标记主键的生成策略 自增
+    @Column(name = "good_id")
     private Integer goodId;
 
     private String goodname;
 
     private Integer price;
-
+    @Column(name = "sort_id")
     private Integer sortId;
 
     private String description;
+    @Transient//设置表中没有的字段
+    private String sortname;
+
+    public String getSortname() {
+        return sortname;
+    }
+
+    public void setSortname(String sortname) {
+        this.sortname = sortname;
+    }
 
     public Integer getGoodId() {
         return goodId;
